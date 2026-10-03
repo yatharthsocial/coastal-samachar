@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f7fb;
+  --foreground: #1a1a1f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: #ea4f5b;
+  --color-accent-soft: #fdeff0;
+  --color-muted: #8a8c99;
+  --color-ink-2: #3a3a44;
+  --color-line: #ececf2;
+  --color-pocket: #3bb77e;
+  --font-sans: var(--font-dm-sans);
+
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-fade-up: fade-up 0.5s ease-out both;
+  --animate-pop: pop 0.4s ease-out;
+  --animate-toast: toast-in 0.3s ease-out both;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-12deg); }
+  60% { transform: rotate(8deg); }
+  80% { transform: rotate(-4deg); }
+}
+@keyframes progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
 }
+
+::selection {
+  background: #ea4f5b33;
+}
+
+/* Scroll-reveal (toggled by <Reveal>) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Article body typography */
+.prose {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #33343d;
+}
+.prose > * + * { margin-top: 1.15em; }
+.prose h2 {
+  margin-top: 2em;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--foreground);
+  scroll-margin-top: 90px;
+}
+.prose h3 {
+  margin-top: 1.6em;
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: var(--foreground);
+  scroll-margin-top: 90px;
+}
+.prose a {
+  color: var(--color-accent);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.prose a:hover { text-decoration-thickness: 2px; }
+.prose strong { color: var(--foreground); font-weight: 650; }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li { margin-top: 0.45em; padding-left: 0.2em; }
+.prose li::marker { color: var(--color-accent); }
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-accent-soft);
+  border-radius: 0 12px 12px 0;
+  padding: 1em 1.3em;
+  font-size: 1.05em;
+  font-weight: 500;
+  color: var(--foreground);
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.prose th, .prose td {
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.7em 0.9em;
+  text-align: left;
+}
+.prose th { background: #f6f7fb; font-weight: 650; color: var(--foreground); }
+.prose em { color: #4d4f5c; }

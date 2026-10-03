@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw source media (processed copies live in public/)
+/src/*.mov
+/src/*.mp4
+/src/*.jpg
+/src/*.jpeg
+/src/*.webp
+/src/*.png
