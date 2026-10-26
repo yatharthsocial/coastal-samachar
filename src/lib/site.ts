@@ -5,7 +5,7 @@ export const site = {
   shortName: "NEWS",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.coastalsamachar.com").replace(/\/$/, ""),
   description:
-    "Coastal Samachar is Mangaluru's local news site for education and culture — student guides, exams, scholarships, cultural events, politics and sports from coastal Karnataka.",
+    "Coastal Samachar is Mangaluru's education and culture news site — Alva's English Medium High School, SSLC and II PUC results and toppers, Alva's Nudisiri-Virasat, and news from coastal Karnataka.",
   locale: "en_IN",
   email: "hello@coastalsamachar.com",
   social: {

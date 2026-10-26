@@ -25,6 +25,7 @@ export function Footer() {
         </FooterCol>
 
         <FooterCol title="Explore">
+          <FooterLink href="/alvas-english-medium-high-school">Alva&apos;s English Medium High School</FooterLink>
           <FooterLink href="/magazine">All stories</FooterLink>
           <FooterLink href="/video">Video</FooterLink>
           <FooterLink href="/polls">Polls</FooterLink>

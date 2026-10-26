@@ -9,6 +9,7 @@ import {
   BookOpen,
   ChartNoAxesColumn,
   Clapperboard,
+  GraduationCap,
   House,
   Search,
   ShieldCheck,
@@ -18,6 +19,7 @@ import { formatDate, site } from "@/lib/site";
 
 const nav = [
   { label: "Home", href: "/", icon: House },
+  { label: "Alva's School", href: "/alvas-english-medium-high-school", icon: GraduationCap },
   { label: "Video", href: "/video", icon: Clapperboard },
   { label: "Polls", href: "/polls", icon: ChartNoAxesColumn },
   { label: "Magazine", href: "/magazine", icon: BookOpen },
@@ -59,7 +61,7 @@ export function Header({ latest }: { latest: Notice[] }) {
           />
         </Link>
 
-        <nav className="ml-2 flex h-full flex-1 items-center gap-1 sm:gap-4 lg:ml-[70px] lg:gap-[52px]">
+        <nav className="ml-2 flex h-full flex-1 items-center gap-1 sm:gap-4 lg:ml-[50px] lg:gap-[34px]">
           {nav.map(({ label, href, icon: Icon }) => {
             const active = isActive(href);
             return (

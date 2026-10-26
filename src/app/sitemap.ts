@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: site.url, lastModified: latest, changeFrequency: "daily", priority: 1 },
+    { url: `${site.url}/alvas-english-medium-high-school`, lastModified: latest, changeFrequency: "weekly", priority: 1 },
     { url: `${site.url}/magazine`, lastModified: latest, changeFrequency: "daily", priority: 0.8 },
     { url: `${site.url}/video`, changeFrequency: "weekly", priority: 0.5 },
     { url: `${site.url}/polls`, changeFrequency: "weekly", priority: 0.4 },

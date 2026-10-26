@@ -9,6 +9,7 @@ import { Poll } from "@/components/Poll";
 import { Newsletter } from "@/components/Newsletter";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
+import { SchoolSpotlight } from "@/components/SchoolSpotlight";
 import { LoopingPreview, VideoOverlay } from "@/components/VideoThumb";
 import { getAllPosts, toCard } from "@/lib/posts";
 import { polls } from "@/lib/data";
@@ -29,7 +30,11 @@ export default function Home() {
     ...politics.filter((p) => !hero.includes(p)),
     ...politics.filter((p) => hero.includes(p)),
   ].slice(0, 3);
-  const eduAll = posts.filter((p) => p.category === "Education" && !hero.includes(p));
+  const isAlvas = (p: (typeof posts)[number]) => p.tags.some((t) => t.startsWith("alvas")) || /alva/i.test(p.title);
+  // Alva's stories lead the Education Corner.
+  const eduAll = posts
+    .filter((p) => p.category === "Education" && !hero.includes(p))
+    .sort((a, b) => Number(isAlvas(b)) - Number(isAlvas(a)));
   // Full rows of three look tidier than a lone card on the last row.
   const education = eduAll.slice(0, Math.min(6, Math.floor(eduAll.length / 3) * 3 || eduAll.length));
   const cultureEvents = posts
@@ -89,6 +94,11 @@ export default function Home() {
           </div>
           <Poll poll={polls[0]} compact />
         </section>
+
+        {/* Alva's English Medium High School spotlight */}
+        <Reveal as="section" className="lg:col-span-2">
+          <SchoolSpotlight />
+        </Reveal>
 
         {/* Video */}
         <Reveal as="section">

@@ -42,6 +42,6 @@ Whichever school you choose, these questions help:
 
 ## Admissions
 
-For admission details, fees and campus visits, contact the school directly through the [Alva's Education Foundation website](https://alvas.org/).
+For full details on Alva's English Medium High School — SSLC results, facilities, sports quota and contact numbers — see our [Alva's English Medium High School guide](/alvas-english-medium-high-school), or visit the [official Alva's Schools website](https://alvasschools.com/alvas-english-medium-high-school/).
 
 *Also read: [Science, commerce or arts? How to choose your stream after SSLC](/news/choosing-a-stream-after-sslc).*
