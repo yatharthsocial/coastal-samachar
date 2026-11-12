@@ -7,6 +7,15 @@ tags: [alvas-pu-college, alvas, ii-puc-2026, puc-result, toppers, moodbidri]
 image: /images/news/alvas-pu-college-poster.jpg
 imageAlt: Aerial view of the Alva's PU College main building in Moodbidri
 featured: true
+summary:
+  - "Disha of Alva's PU College, Moodbidri, scored 600/600 to top Karnataka in Commerce in II PUC 2026."
+  - "The II PUC 2026 results were announced on 9 April 2026."
+  - "Many Alva's PU students come from Alva's English Medium High School on the same campus."
+faqs:
+  - q: "Who topped Karnataka in Commerce in II PUC 2026?"
+    a: "Disha of Alva's PU College, Moodbidri, secured the first rank in Commerce with a perfect 600 out of 600, Daijiworld reported."
+  - q: "When were the Karnataka II PUC 2026 results announced?"
+    a: "The results were announced on Thursday, 9 April 2026."
 ---
 
 **Disha** of **Alva's PU College, Moodbidri**, scored a perfect **600 out of 600** to secure the **first rank in the state in Commerce** in the Karnataka II PUC 2026 examinations, [Daijiworld reported](https://www.daijiworld.com/news/newsDisplay?newsID=1311438).

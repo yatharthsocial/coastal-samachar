@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/Toaster";
 import { BackToTop } from "@/components/BackToTop";
 import { getAllPosts } from "@/lib/posts";
+import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 
 const dmSans = DM_Sans({
@@ -47,6 +48,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${dmSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "NewsMediaOrganization",
+            name: site.name,
+            url: site.url,
+            logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
+            email: site.email,
+            areaServed: ["Mangaluru", "Moodbidri", "Udupi", "Dakshina Kannada", "Karnataka"],
+            knowsAbout: ["Alva's English Medium High School", "SSLC results", "II PUC results", "Alva's Nudisiri", "Coastal Karnataka news"],
+          }}
+        />
         <a
           href="#content"
           className="sr-only z-[80] rounded-full bg-accent px-4 py-2 text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"

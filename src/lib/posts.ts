@@ -29,6 +29,10 @@ export type PostMeta = {
   /** Display length, e.g. "5:26". */
   videoDuration?: string;
   readingTime: number;
+  /** Short "key points" shown at the top of the article (answer-engine friendly). */
+  summary: string[];
+  /** Questions and answers shown at the end, with FAQPage structured data. */
+  faqs: { q: string; a: string }[];
 };
 
 export type Heading = { id: string; text: string; level: number };
@@ -58,6 +62,8 @@ function parseFile(file: string) {
     videoPreview: data.videoPreview,
     videoDuration: data.videoDuration,
     readingTime: Math.max(2, Math.ceil(words / 200)),
+    summary: data.summary ?? [],
+    faqs: data.faqs ?? [],
   };
   return { meta, content };
 }
@@ -113,6 +119,10 @@ export function getPost(slug: string): Post | undefined {
   const html = marked.parse(content, { async: false });
   return { ...meta, html, headings };
 }
+
+/** Stories about Alva's institutions (used for priority and structured data). */
+export const isAlvasPost = (p: Pick<PostMeta, "tags" | "title">) =>
+  p.tags.some((t) => t.startsWith("alvas")) || /alva/i.test(p.title);
 
 /** Absolute URL for share previews, structured data and the sitemap. */
 export const shareImage = (p: Pick<PostMeta, "image">) =>

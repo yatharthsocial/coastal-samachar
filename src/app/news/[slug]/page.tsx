@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, CalendarDays, ChevronRight, Clock } from "lucide-react";
-import { getAllPosts, getPost, getRelatedPosts, shareImage, toCard } from "@/lib/posts";
+import { ArrowLeft, ArrowRight, CalendarDays, ChevronDown, ChevronRight, Clock } from "lucide-react";
+import { getAllPosts, getPost, getRelatedPosts, isAlvasPost, shareImage, toCard } from "@/lib/posts";
+import { school } from "@/lib/alvas";
 import { formatDate, site, slugify } from "@/lib/site";
 import { polls } from "@/lib/data";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -90,10 +91,40 @@ export default async function ArticlePage({ params }: PageProps<"/news/[slug]">)
               dateModified: post.updated ?? post.date,
               articleSection: post.category,
               keywords: post.tags.join(", "),
+              inLanguage: "en-IN",
+              isAccessibleForFree: true,
               author: { "@type": "Organization", name: post.author, url: site.url },
-              publisher: { "@type": "Organization", name: site.name, url: site.url },
+              publisher: {
+                "@type": "NewsMediaOrganization",
+                name: site.name,
+                url: site.url,
+                logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
+              },
               mainEntityOfPage: `${site.url}${path}`,
+              speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "#key-points"] },
+              ...(isAlvasPost(post)
+                ? {
+                    about: {
+                      "@type": "HighSchool",
+                      name: school.name,
+                      url: school.officialUrl,
+                      address: { "@type": "PostalAddress", addressLocality: school.address.locality, addressRegion: school.address.region, addressCountry: "IN" },
+                    },
+                  }
+                : {}),
             },
+            ...(post.faqs.length
+              ? [
+                  {
+                    "@type": "FAQPage",
+                    mainEntity: post.faqs.map((f) => ({
+                      "@type": "Question",
+                      name: f.q,
+                      acceptedAnswer: { "@type": "Answer", text: f.a },
+                    })),
+                  },
+                ]
+              : []),
             ...(post.videoFile
               ? [
                   {
@@ -161,6 +192,11 @@ export default async function ArticlePage({ params }: PageProps<"/news/[slug]">)
                         <CalendarDays className="size-3" />
                         <time dateTime={post.date}>{formatDate(post.date)}</time>
                       </span>
+                      {post.updated && post.updated !== post.date && (
+                        <span>
+                          Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                        </span>
+                      )}
                       <span className="flex items-center gap-1">
                         <Clock className="size-3" /> {post.readingTime} min read
                       </span>
@@ -212,7 +248,37 @@ export default async function ArticlePage({ params }: PageProps<"/news/[slug]">)
             </div>
 
             <div className="mt-8 rounded-2xl bg-white px-6 py-10 sm:px-12">
+              {post.summary.length > 0 && (
+                <aside id="key-points" className="mx-auto mb-10 max-w-[720px] rounded-2xl border border-accent/20 bg-accent-soft/60 p-6">
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-accent">Key points</p>
+                  <ul className="mt-3 space-y-2">
+                    {post.summary.map((s) => (
+                      <li key={s} className="flex gap-3 text-[15px] leading-relaxed text-foreground">
+                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </aside>
+              )}
               <div className="prose mx-auto max-w-[720px]" dangerouslySetInnerHTML={{ __html: post.html }} />
+
+              {post.faqs.length > 0 && (
+                <section aria-labelledby="faq-heading" className="mx-auto mt-12 max-w-[720px]">
+                  <h2 id="faq-heading" className="text-[22px] font-bold">Frequently asked questions</h2>
+                  <div className="mt-5 space-y-3">
+                    {post.faqs.map((f) => (
+                      <details key={f.q} className="group rounded-2xl border border-line bg-background/60 px-5 py-4 open:bg-white open:shadow-lg open:shadow-black/5">
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[15px] font-semibold">
+                          {f.q}
+                          <ChevronDown className="size-4 shrink-0 text-muted transition group-open:rotate-180" />
+                        </summary>
+                        <p className="mt-3 text-[14.5px] leading-relaxed text-ink-2">{f.a}</p>
+                      </details>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               <div className="mx-auto mt-12 max-w-[720px] space-y-8 border-t border-line pt-8">
                 {post.tags.length > 0 && (

@@ -7,6 +7,17 @@ tags: [alvas-nudisiri, alvas-virasat, alvas, culture, moodbidri, festival]
 image: /images/news/alvas-cultural-festival.jpg
 imageAlt: A huge crowd at an evening cultural programme on the Alva's campus in Moodbidri
 featured: true
+summary:
+  - "Alva's Nudisiri-Virasat 2027 will be held in Moodbidri from 6 to 10 January 2027."
+  - "It is the 17th Nudisiri and the 31st Virasat."
+  - "Theme: 'Kannada Manassu: Bhavishyada Kanasu'."
+faqs:
+  - q: "When is Alva's Nudisiri 2027?"
+    a: "Alva's Nudisiri-Virasat will be held in Moodbidri from 6 to 10 January 2027."
+  - q: "What is the theme of Alva's Nudisiri-Virasat 2027?"
+    a: "The theme is 'Kannada Manassu: Bhavishyada Kanasu'."
+  - q: "Who will inaugurate Alva's Nudisiri 2027?"
+    a: "Senior journalist Vishweshwar Bhat will inaugurate the Nudisiri literary convention, and literary critic Narahalli Balasubrahmanya will preside."
 ---
 
 **Alva's Nudisiri** and **Alva's Virasat** will be held together as a five-day cultural and literary festival — **Alva's Nudisiri-Virasat** — in Moodbidri from **6 to 10 January 2027**, [NewsKarnataka reported](https://newskarnataka.com/mangaluru/alvas-nudisiri-virasat-to-be-held-in-moodbidri-from-january-6-to-10/09102026/).
