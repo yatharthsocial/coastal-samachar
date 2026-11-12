@@ -16,13 +16,14 @@ import { JsonLd } from "@/components/JsonLd";
 import { PostCard } from "@/components/PostCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionTitle } from "@/components/SectionTitle";
-import { faqs, facilities, highlights, school, sslcHistory } from "@/lib/alvas";
+import { faqs, facilities, highlights, school, sslcHistory, sslcToppers } from "@/lib/alvas";
+import { AlvasAchievements } from "@/components/AlvasAchievements";
 import { getAllPosts, toCard } from "@/lib/posts";
 import { site } from "@/lib/site";
 
 const title = "Alva's English Medium High School, Moodbidri – Admissions, SSLC Results & Facilities";
 const description =
-  "Alva's English Medium High School, Moodbidri (Alva's Education Foundation): 100% SSLC pass record, classes of 35, IIT foundation coaching, hostels, sports quota admissions and contact details.";
+  "Alva's English Medium High School, Moodbidri (Alva's Education Foundation): SSLC toppers up to 624/625 (2nd in Karnataka), state U-17 athletics champions 2026, classes of 35, IIT foundation coaching, hostels, sports quota admissions and contact details.";
 
 export const metadata: Metadata = {
   title,
@@ -115,7 +116,7 @@ export default function AlvasHighSchoolPage() {
           </h1>
           <p className="mt-5 max-w-[560px] text-[17px] leading-relaxed text-ink-2">
             Run by {school.foundation} in Moodbidri, Dakshina Kannada, {school.name} combines a{" "}
-            <strong className="text-foreground">100% SSLC pass record</strong>, small classes and IIT foundation coaching
+            <strong className="text-foreground">SSLC toppers scoring up to 624/625</strong>, small classes and IIT foundation coaching
             with sport, arts and culture — a popular choice for families in and around Mangaluru.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -180,6 +181,12 @@ export default function AlvasHighSchoolPage() {
             </div>
           </Reveal>
 
+          {/* Achievements */}
+          <Reveal as="section">
+            <SectionTitle bold="Achievements" light="2026" seeAllHref="/news/alvas-achievements-2026" />
+            <AlvasAchievements />
+          </Reveal>
+
           {/* Facilities */}
           <Reveal as="section">
             <SectionTitle bold="Facilities" light="& programmes" />
@@ -211,6 +218,25 @@ export default function AlvasHighSchoolPage() {
                 </Link>
               </p>
             </div>
+            <h3 className="mb-3 mt-8 text-[16px] font-semibold">Highest SSLC scores</h3>
+            <ol className="mb-8 space-y-2">
+              {sslcToppers.map((t, i) => (
+                <li key={t.name} className="flex items-center gap-4 rounded-2xl bg-white px-5 py-3.5">
+                  <span className={`flex size-8 shrink-0 items-center justify-center rounded-full text-[13px] font-bold ${i === 0 ? "bg-accent text-white" : "bg-accent-soft text-accent"}`}>
+                    {i + 1}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-[14.5px] font-semibold">{t.name}</span>
+                    <span className="block text-[12px] text-muted">{t.year} · {t.note}</span>
+                  </span>
+                  <span className="text-[18px] font-bold text-accent">{t.marks}<span className="text-[12px] font-medium text-muted">/625</span></span>
+                </li>
+              ))}
+            </ol>
+            <p className="mb-3 text-[13px] text-muted">
+              <Link href="/news/alvas-sslc-toppers-highest-scores" className="font-semibold text-accent hover:underline">All Alva&apos;s SSLC toppers and pass figures →</Link>
+            </p>
+            <h3 className="mb-3 mt-8 text-[16px] font-semibold">First five batches</h3>
             <div className="overflow-x-auto rounded-2xl bg-white p-2">
               <table className="w-full min-w-[560px] text-left text-[14px]">
                 <thead>
@@ -236,7 +262,7 @@ export default function AlvasHighSchoolPage() {
               </table>
             </div>
             <p className="mt-3 text-[12px] text-muted">
-              Earlier batches, 100% pass each year, as published on the{" "}
+              First five batches (100% pass each year), as published on the{" "}
               <a href={school.officialUrl} target="_blank" rel="noopener" className="underline hover:text-accent">
                 school&apos;s official website
               </a>

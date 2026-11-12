@@ -9,7 +9,7 @@ imageAlt: Aerial view of the Alva's Education Foundation campus in Moodbidri
 featured: true
 summary:
   - "Alva's Education Foundation runs kindergarten, English medium, Kannada medium, Central (NCERT) and ICSE schools in Moodbidri."
-  - "Alva's English Medium High School prepares students for the SSLC (Class 10) exam and reports a 100% pass record."
+  - "Alva's English Medium High School prepares students for the SSLC (Class 10) exam with toppers scoring up to 624/625."
   - "All the schools share the same campus facilities — hostels, sports grounds and cultural programmes."
 faqs:
   - q: "How many schools does Alva's Education Foundation run?"
@@ -39,7 +39,7 @@ According to [Alva's Schools](https://alvasschools.com/), the campus has:
 
 ### For the Karnataka SSLC: English Medium High School
 
-[Alva's English Medium High School](/alvas-english-medium-high-school) is the choice for families who want English-medium teaching with the state SSLC exam at the end of Class 10. It reports a **100% SSLC pass record**, keeps classes to **35 students**, and adds **IIT foundation coaching**.
+[Alva's English Medium High School](/alvas-english-medium-high-school) is the choice for families who want English-medium teaching with the state SSLC exam at the end of Class 10. Its toppers have scored up to **624/625** in the SSLC; it keeps classes to **35 students** and adds **IIT foundation coaching**.
 
 ### For Kannada-medium learning
 

@@ -10,6 +10,7 @@ import { Newsletter } from "@/components/Newsletter";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { SchoolSpotlight } from "@/components/SchoolSpotlight";
+import { AlvasAchievements } from "@/components/AlvasAchievements";
 import { LoopingPreview, VideoOverlay } from "@/components/VideoThumb";
 import { getAllPosts, isAlvasPost, toCard } from "@/lib/posts";
 import { polls } from "@/lib/data";
@@ -98,6 +99,16 @@ export default function Home() {
         <Reveal as="section" className="lg:col-span-2">
           <SchoolSpotlight />
         </Reveal>
+
+        {/* Alva's achievements */}
+        <section className="lg:col-span-2">
+          <Reveal>
+            <SectionTitle bold="Alva's" light="Achievements 2026" seeAllHref="/news/alvas-achievements-2026" />
+          </Reveal>
+          <Reveal>
+            <AlvasAchievements />
+          </Reveal>
+        </section>
 
         {/* Video */}
         <Reveal as="section">

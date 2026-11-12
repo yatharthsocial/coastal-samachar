@@ -32,6 +32,6 @@ Dakshina Kannada and Udupi recorded the highest pass percentages in the state, a
 
 ## From Alva's High School to PU
 
-Many Alva's PU students come from [Alva's English Medium High School](/alvas-english-medium-high-school) on the same Moodbidri campus, which has a 100% SSLC pass record.
+Many Alva's PU students come from [Alva's English Medium High School](/alvas-english-medium-high-school) on the same Moodbidri campus, whose toppers have scored up to 624/625 in the SSLC.
 
 *Watch: [Alva's PU College campus video tour](/news/alvas-pu-college-moodbidri-video).*

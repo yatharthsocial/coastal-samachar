@@ -28,10 +28,61 @@ export const school = {
 };
 
 export const highlights = [
-  { value: "100%", label: "SSLC pass record" },
+  { value: "624/625", label: "Best SSLC score (State rank 2)" },
+  { value: "100%", label: "SSLC results, first 5 batches" },
+  { value: "26 medals", label: "State U-17 athletics champions" },
   { value: "35", label: "Max. students per class" },
-  { value: "400 m", label: "Synthetic athletics track" },
-  { value: "24×7", label: "Medical facility" },
+];
+
+/** Verified 2026 achievements across Alva's schools and PU college. */
+export const achievements = [
+  {
+    area: "Sports",
+    value: "Overall champions",
+    text: "State U-17 Athletics 2026: 26 medals (11 gold), both team titles; 12 athletes to nationals.",
+    href: "/news/alvas-school-state-u17-athletics-champions-2026",
+  },
+  {
+    area: "SSLC",
+    value: "624 / 625",
+    text: "Highest Alva's SSLC score: Pranshula Prashanth, 2nd in Karnataka. 622 in SSLC 2026.",
+    href: "/news/alvas-sslc-toppers-highest-scores",
+  },
+  {
+    area: "II PUC",
+    value: "600 / 600",
+    text: "Disha of Alva's PU College tops Karnataka in Commerce, II PUC 2026.",
+    href: "/news/alvas-pu-college-disha-tops-karnataka-commerce-2026",
+  },
+  {
+    area: "JEE Advanced",
+    value: "17 qualified",
+    text: "17 Alva's PU students qualify for JEE Advanced 2026; best rank AIR 1513.",
+    href: "/news/alvas-pu-jee-advanced-2026-17-qualify",
+  },
+  {
+    area: "Defence",
+    value: "10 cleared",
+    text: "10 Alva's PU students clear the UPSC NDA & NA written exam.",
+    href: "/news/alvas-pu-students-clear-nda-exam-2026",
+  },
+  {
+    area: "Culture",
+    value: "Jan 6–10",
+    text: "Alva's Nudisiri-Virasat 2027: 17th Nudisiri and 31st Virasat in Moodbidri.",
+    href: "/news/alvas-nudisiri-virasat-2027",
+  },
+];
+
+/** Highest SSLC scores reported for Alva's high schools. */
+export const sslcToppers = [
+  { year: "2018", name: "Pranshula Prashanth", marks: 624, note: "English Medium · 2nd in Karnataka, 1st in district" },
+  { year: "2017", name: "Deeksha M N", marks: 623, note: "English Medium" },
+  { year: "2017", name: "Akash M Nairi", marks: 623, note: "English Medium" },
+  { year: "2026", name: "Shadhvi P V", marks: 622, note: "Alva's School, Moodbidri" },
+  { year: "2018", name: "Lavanya Shahapura", marks: 622, note: "English Medium · 3rd in district" },
+  { year: "2017", name: "Laxmi Ishwara Nagathane", marks: 621, note: "Kannada Medium" },
+  { year: "2018", name: "Sudhanva Nadigere", marks: 619, note: "Kannada Medium" },
 ];
 
 export const facilities = [
@@ -65,7 +116,15 @@ export const faqs = [
   },
   {
     q: "What are the SSLC results of Alva's English Medium High School?",
-    a: "The school reports a 100% SSLC pass record. Its toppers have scored up to 618 out of 625 (98.88%), and in SSLC 2026 Shadhvi P V of Alva's School, Moodbidri, scored 622 marks.",
+    a: "The school reported 100% results for its first five SSLC batches (2012–16), and 99.15% for the English Medium High School in 2017. Its highest score is 624/625 (2018), and in SSLC 2026 Shadhvi P V of Alva's School, Moodbidri, scored 622.",
+  },
+  {
+    q: "What is the highest SSLC score at Alva's English Medium High School?",
+    a: "The highest reported score is 624 out of 625, by Pranshula Prashanth in 2018, who secured the second rank in Karnataka and first in the district. In 2017, Deeksha M N and Akash M Nairi scored 623.",
+  },
+  {
+    q: "What did Alva's School achieve in sports in 2026?",
+    a: "At the State-level Under-17 Athletics Championship 2026 at Kanteerava Stadium, Bengaluru (1–3 November), Alva's School, Moodubidire, won 26 medals (11 gold, 8 silver, 7 bronze), the overall championship and both boys' and girls' team titles. 12 athletes qualified for the national school championship.",
   },
   {
     q: "How many students are there in each class?",

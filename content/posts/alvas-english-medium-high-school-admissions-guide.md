@@ -29,7 +29,7 @@ If your child is moving to high school next year, [Alva's English Medium High Sc
 
 ## About the school
 
-Alva's English Medium High School started in **2011–12** on the Alva's Education Foundation campus at **Vivekanandanagara, Puthige, Moodubidire**. The foundation is chaired by **Dr. M. Mohan Alva**. The school reports a **100% SSLC pass record**, with toppers in earlier years scoring up to 618 out of 625.
+Alva's English Medium High School started in **2011–12** on the Alva's Education Foundation campus at **Vivekanandanagara, Puthige, Moodubidire**. The foundation is chaired by **Dr. M. Mohan Alva**. Its students have scored up to **624 out of 625** in the SSLC, second in Karnataka in 2018, and the school reported 100% results for its first five batches.
 
 ## What your child gets
 

@@ -24,7 +24,7 @@ export function SchoolSpotlight() {
           <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-white/50">Moodbidri · Since 2011</p>
           <h2 className="mt-2 text-[26px] font-bold leading-tight sm:text-[32px]">{school.name}</h2>
           <p className="mt-3 text-[14.5px] leading-relaxed text-white/65">
-            100% SSLC results, classes of 35, IIT foundation coaching, hostels and a 400 m track — on the Alva&apos;s
+            SSLC toppers up to 624/625, state U-17 athletics champions 2026, classes of 35, IIT foundation coaching and hostels — on the Alva&apos;s
             Education Foundation campus.
           </p>
         </div>

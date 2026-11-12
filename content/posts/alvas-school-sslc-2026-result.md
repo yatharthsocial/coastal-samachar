@@ -10,12 +10,12 @@ featured: true
 summary:
   - "Shadhvi P V of Alva's School, Moodbidri, scored 622 out of 625 in SSLC 2026."
   - "Dakshina Kannada topped Karnataka with a 98.40% pass rate."
-  - "Alva's English Medium High School reports a 100% SSLC pass record since 2011–12."
+  - "Alva's highest reported SSLC score is 624/625 (2018), second in Karnataka."
 faqs:
   - q: "Who scored the highest marks from Alva's School in SSLC 2026?"
     a: "Shadhvi P V of Alva's School, Moodbidri, scored 622 out of 625, according to Mangalore Today."
   - q: "What is the SSLC pass percentage of Alva's English Medium High School?"
-    a: "The school reports a 100% SSLC pass record since its first batch in 2011–12."
+    a: "The school reported 100% results for its first five SSLC batches (2012–16). In 2017, the English Medium High School recorded 99.15%, Daijiworld reported."
   - q: "When were the SSLC 2026 results announced?"
     a: "The Karnataka SSLC 2026 results were announced on Thursday, 23 April 2026."
 ---
@@ -24,9 +24,9 @@ faqs:
 
 The results were announced on Thursday, 23 April. **Dakshina Kannada** finished first in the state with a pass percentage of **98.40%**.
 
-## A record of 100% results
+## A record of strong results
 
-[Alva's English Medium High School](/alvas-english-medium-high-school) has reported a 100% SSLC pass record since its first batch in 2011–12. According to the school, its toppers in earlier years scored up to **618 out of 625 (98.88%)**:
+[Alva's English Medium High School](/alvas-english-medium-high-school) reported 100% results for its first five SSLC batches (2012–16), and its toppers have scored up to **624 out of 625**. See [Alva's SSLC toppers through the years](/news/alvas-sslc-toppers-highest-scores). Earlier toppers, according to the school:
 
 | Year | Topper | Marks |
 | --- | --- | --- |

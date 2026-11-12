@@ -1,4 +1,4 @@
-import { faqs, school, sslcHistory } from "@/lib/alvas";
+import { faqs, school } from "@/lib/alvas";
 import { getAllPosts, isAlvasPost } from "@/lib/posts";
 import { site } from "@/lib/site";
 
@@ -26,7 +26,7 @@ ${site.name} is a Mangaluru-based news site. Its main education focus is ${schoo
 - Started: ${school.established}
 - Medium: English; students write the SSLC (Class 10) exam
 - Class size: up to 35 students
-- SSLC: 100% pass record reported by the school; best published topper score ${sslcHistory.at(-1)?.marks}
+- SSLC: 100% results in the first five batches (2012–16); 99.15% (English Medium, 2017). Highest score 624/625 by Pranshula Prashanth (2018, 2nd in Karnataka); 622 by Shadhvi P V in SSLC 2026
 - Facilities: IIT foundation coaching, hostels for boys and girls, 400 m synthetic track, 24x7 medical facility, transport
 - Admissions contact: ${school.phones[0]}, ${school.email}
 
