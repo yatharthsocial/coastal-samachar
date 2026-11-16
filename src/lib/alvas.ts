@@ -49,10 +49,22 @@ export const achievements = [
     href: "/news/alvas-sslc-toppers-highest-scores",
   },
   {
+    area: "CBSE Class 10",
+    value: "46 above 95%",
+    text: "Alva's CBSE school: 100% results for the 6th year in a row; topper 99.2%.",
+    href: "/news/alvas-cbse-class-10-result-2026",
+  },
+  {
     area: "II PUC",
     value: "600 / 600",
     text: "Disha of Alva's PU College tops Karnataka in Commerce, II PUC 2026.",
     href: "/news/alvas-pu-college-disha-tops-karnataka-commerce-2026",
+  },
+  {
+    area: "NEET",
+    value: "653 marks",
+    text: "Sooryakanth Patil tops Alva's in NEET 2026; 21 above 99 percentile.",
+    href: "/news/alvas-neet-2026-result-sooryakanth-patil-653",
   },
   {
     area: "JEE Advanced",

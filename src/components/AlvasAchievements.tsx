@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { ArrowUpRight, BookOpenCheck, Medal, Music, Shield, Sparkles, Trophy } from "lucide-react";
+import { ArrowUpRight, BookOpenCheck, FlaskConical, GraduationCap, Medal, Music, Shield, Sparkles, Trophy } from "lucide-react";
 import { achievements } from "@/lib/alvas";
 
 const icons: Record<string, typeof Trophy> = {
   Sports: Medal,
   SSLC: Trophy,
+  "CBSE Class 10": GraduationCap,
   "II PUC": Sparkles,
+  NEET: FlaskConical,
   "JEE Advanced": BookOpenCheck,
   Defence: Shield,
   Culture: Music,
@@ -13,7 +15,7 @@ const icons: Record<string, typeof Trophy> = {
 
 export function AlvasAchievements() {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
       {achievements.map((a) => {
         const Icon = icons[a.area] ?? Trophy;
         return (
